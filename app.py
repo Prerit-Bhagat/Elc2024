@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+import time
+import hpelm
+from hpelm import ELM # type: ignore
+import joblib
 
 app = Flask(__name__)
 
 # Load the model
-with open('elm_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+# with open('elm_model.pkl', 'rb') as file:
+model = joblib.load('ekm_model.pkl')
 
 @app.route('/', methods=['POST'])
 def predict():
