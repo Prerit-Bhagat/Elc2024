@@ -8,6 +8,7 @@ import joblib
 
 app = Flask(__name__)
 
+print("")
 # Load the model
 # with open('elm_model.pkl', 'rb') as file:
 model = joblib.load('ekm_model.pkl')
