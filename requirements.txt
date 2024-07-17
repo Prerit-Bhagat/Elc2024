@@ -5,3 +5,6 @@ gunicorn
 matplotlib
 hpelm
 dill
+elm
+joblib
+TIME-python
